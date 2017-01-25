@@ -1,0 +1,16 @@
+{
+  "name": "jet-di",
+  "version": "1.0.0",
+  "description": "Jet-DI is a simple Dependency Injection for Node.js projects. Is was originated on JetApp framework development. Its approach is very minimalistic and does not burdens the developer with complex names or syntax, providing simplicity for the user too (the developer).",
+  "main": "lib/index.js",
+  "author": "Douglas Meira Cotrim Pereira de Melo",
+  "keywords": [
+    "dependency injection",
+    "inversion of control"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "read-pkg-up": "^2.0.0"
+  }
+}

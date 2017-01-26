@@ -1,4 +1,4 @@
-# jet-di [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+# jet-di [![NPM version][npm-image]]
 > Jet-DI is a simple Dependency Injection for Node.js projects. Is was originated on JetApp framework development. Its approach is very minimalistic and does not burdens the developer with complex names or syntax, providing simplicity for the user too (the developer).
 
 ## Installation

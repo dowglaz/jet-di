@@ -1,17 +1,25 @@
 const gulp = require('gulp');
+const watch = require('gulp-watch');
 const eslint = require('gulp-eslint');
 const ava = require('gulp-ava');
+const through = require('through2');
 
-gulp.task('lint', () => {
-  return gulp.src(['lib/*.js', 'test/*.js'])
+const files = ['gulpfile.js', 'index.js', 'lib/**/*.js', 'test/**/*.js'];
+
+gulp.task('lint', () => (
+  gulp
+    .src(files)
     .pipe(eslint())
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError());
-});
+    .pipe(eslint.format('codeframe'))
+    .pipe(eslint.failAfterError())
+));
 
-gulp.task('test', () => {
-  return gulp.src('test/*.js')
-    .pipe(ava())
-});
+gulp.task('test', () => (
+  gulp.src('test/*.js').pipe(ava())
+));
 
-gulp.task('default', ['lint', 'test']);
+gulp.task('watch', () => (
+  watch(files, () => gulp.run(['lint', 'test']))
+));
+
+gulp.task('default', ['lint', 'test', 'watch']);

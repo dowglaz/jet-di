@@ -2,8 +2,11 @@
   "name": "jet-di",
   "version": "1.0.0",
   "description": "Jet-DI is a simple Dependency Injection for Node.js projects. Is was originated on JetApp framework development. Its approach is very minimalistic and does not burdens the developer with complex names or syntax, providing simplicity for the user too (the developer).",
-  "main": "lib/index.js",
-  "author": "Douglas Meira Cotrim Pereira de Melo",
+  "main": "index.js",
+  "author": {
+    "name": "Douglas Meira Cotrim Pereira de Melo",
+    "email": "cotrim.doug@gmail.com"
+  },
   "license": "MIT",
   "keywords": [
     "dependency injection",
@@ -21,6 +24,22 @@
     "eslint-plugin-import": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-ava": "^0.15.0",
-    "gulp-eslint": "^3.0.1"
+    "gulp-eslint": "^3.0.1",
+    "gulp-watch": "^4.3.11",
+    "map-stream": "^0.0.6"
+  },
+  "scripts": {
+    "start": "node .",
+    "test": "ava"
+  },
+  "ava": {
+    "files": [
+      "test/index.js"
+    ],
+    "source": [
+      "index.js",
+      "lib/**/*.js"
+    ],
+    "verbose": true
   }
 }
